@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GalvisDeveloper/nodejs-webserver/issues"
   },
-  "homepage": "https://github.com/GalvisDeveloper/nodejs-webserver#readme"
+  "homepage": "https://github.com/GalvisDeveloper/nodejs-webserver#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
