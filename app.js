@@ -1,15 +1,16 @@
-const express = require("express");
-const app = express();
-const port = 8080;
+const http = require("http");
 
-// Servir contenido estático mediante middleware
-app.use(express.static("public"));
+http
+  .createServer((req, res) => {
+    // res.setHeader("Content-Disposition", "attachment; filename=lista.csv");
 
-app.get("*", (req, res) => {
-  res.status(404);
-  res.sendFile(__dirname + "/public/404.html");
-});
+    // res.writeHead(200, { "Content-Type": "application/csv" });
+    // res.write("404 | Page Not Found!");
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+    res.write("Hello world")
+
+    res.end();
+  })
+  .listen(8080);
+
+console.log("Listen on port", 8080);
